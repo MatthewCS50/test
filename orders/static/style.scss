@@ -1,0 +1,14 @@
+$color: white;
+
+html, body {
+	background-color: $color;
+
+	body > div {
+		background-color: $color;
+		padding: 30px;
+
+		form {
+			padding: 10px;
+		}
+	}
+}

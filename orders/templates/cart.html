@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %}
+	Shopping Cart
+{% endblock %}
+
+{% block body %}
+	<h2>Your Shopping Cart</h2>
+	<ul id="items"></ul>
+	<div id="price">Total Cost: $</div>
+	<br>
+	<form action="/cart" method="POST">
+		{% csrf_token %}
+		<button type="submit" id="ordered">Place Order</button>
+	</form>
+{% endblock %}

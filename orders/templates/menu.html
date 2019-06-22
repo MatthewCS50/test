@@ -1,0 +1,128 @@
+{% extends "base.html" %}
+
+{% block title %}
+	Menu
+{% endblock %}
+
+{% block body %}
+	<h2 id="menu">Pinochio's Pizza</h2>
+
+	<h3>Pizzas</h3>
+	{% for pizza in pizzas %}
+		<li>
+			{{ pizza }}
+		</li>
+	{% endfor %}
+	<form class="order">
+		<select class="select">
+			<option>Choose Pizza</option>
+			{% for pizza in pizzas %}
+				<option class="food" value="{{ pizza.price }}">{{ pizza }}</option>
+			{% endfor %}
+		</select>
+		<button class="add-food" type="button">Add to Cart</button>
+	</form>
+	<h5>Toppings</h5>
+	{% for topping in toppings %}
+		<li>
+			{{ topping }}
+		</li>
+	{% empty %}
+		<li>
+			Empty
+		</li>
+	{% endfor %}
+	<form class="order">
+		<select class="select">
+			<option>Choose Topping</option>
+			{% for topping in toppings %}
+				<option class="food" value="0">{{ topping }}</option>
+			{% endfor %}
+		</select>
+		<button class="add-food" type="button">Add to Cart</button>
+	</form>
+
+
+	<h3>Subs</h3>
+	{% for sub in subs %}
+		<li>
+			{{ sub }}
+		</li>
+	{% endfor %}
+	<form class="order">
+		<select class="select">
+			<option>Choose Sub</option>
+			{% for sub in subs %}
+				<option class="food" value="{{ sub.price }}">{{ sub }}</option>
+			{% endfor %}
+		</select>
+		<button class="add-food" type="button">Add to Cart</button>
+	</form>
+	<h5>Additions</h5>
+	{% for addition in additions %}
+		<li>
+			{{ addition }}
+		</li>
+	{% endfor %}
+	<form class="order">
+		<select class="select">
+			<option>Choose Additions</option>
+			{% for addition in additions %}
+				<option class="food" value="{{ addition.price }}">{{ addition }}</option>
+			{% endfor %}
+		</select>
+		<button class="add-food" type="button">Add to Cart</button>
+	</form>
+
+	<h3>Salads</h3>
+	{% for salad in salads %}
+		<li>
+			{{ salad }}
+		</li>
+	{% endfor %}
+	<br>
+	<form class="order">
+		<select class="select">
+			<option>Choose Salad</option>
+			{% for salad in salads %}
+				<option class="food" value="{{ salad.price }}">{{ salad }}</option>
+			{% endfor %}
+		</select>
+		<button class="add-food" type="button">Add to Cart</button>
+	</form>
+
+	<h3>Dinner Platters</h3>
+	{% for platter in platters %}
+		<li>
+			{{ platter }}
+		</li>
+	{% endfor %}
+	<br>
+	<form class="order">
+		<select class="select">
+			<option>Choose Dinner Platter</option>
+			{% for platter in platters %}
+				<option class="food" value="{{ platter.price }}">{{ platter }}</option>
+			{% endfor %}
+		</select>
+		<button class="add-food" type="button">Add to Cart</button>
+	</form>
+
+	<h3>Pastas</h3>
+	{% for pasta in pastas %}
+		<li>
+			{{ pasta }}
+		</li>
+	{% endfor %}
+	<br>
+	<form class="order">
+		<select class="select">
+			<option>Choose Pasta</option>
+			{% for pasta in pastas %}
+				<option class="food" value="{{ pasta.price }}">{{ pasta }}</option>
+			{% endfor %}
+		</select>
+		<button class="add-food" type="submit">Add to Cart</button>
+	</form>
+
+{% endblock %}

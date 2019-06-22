@@ -1,0 +1,12 @@
+html, body {
+  background-color: white;
+}
+html body > div, body body > div {
+  background-color: white;
+  padding: 30px;
+}
+html body > div form, body body > div form {
+  padding: 10px;
+}
+
+/*# sourceMappingURL=style.css.map */
